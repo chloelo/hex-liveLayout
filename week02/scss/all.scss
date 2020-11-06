@@ -1,0 +1,140 @@
+$white: #fff;
+$black: #000;
+$red: #891818;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@for $i from 1 through 10 {
+  //從 1 到 10 共執行 10 次。
+  .mb-#{$i} {
+    margin-bottom: (8px * $i);
+  }
+  .mt-#{$i} {
+    margin-top: (8px * $i);
+  }
+  .mr-#{$i} {
+    margin-right: (8px * $i);
+  }
+  .ml-#{$i} {
+    margin-left: (8px * $i);
+  }
+  .pb-#{$i} {
+    padding-bottom: (8px * $i);
+  }
+  .pt-#{$i} {
+    padding-top: (8px * $i);
+  }
+  .py-#{$i} {
+    padding-top: (8px * $i);
+    padding-bottom: (8px * $i);
+  }
+}
+.pb-20 {
+  padding-bottom: 160px;
+}
+.d-flex {
+  display: flex;
+}
+.text-center {
+  text-align: center;
+}
+body {
+  font-family: Roboto, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+}
+img {
+  vertical-align: middle;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+
+header {
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week2/banner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+h1 {
+  font-size: 80px;
+}
+h2 {
+  font-size: 75px;
+}
+
+.person-experience {
+  border-top: 1px solid $black;
+  max-width: 384px;
+  margin: auto;
+  li {
+    @extend .mt-4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dot {
+    width: 22px;
+    height: 22px;
+    background-color: $red;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+}
+.brand {
+  background-color: $black;
+  color: $white;
+  li {
+    font-size: 20px;
+  }
+  .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.works {
+  padding-bottom: 106px;
+  p {
+    font-size: 20px;
+    @extend .mb-7, .mt-2;
+  }
+  .lists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+.contact {
+  background-color: $black;
+  color: $white;
+  li {
+    @extend .mt-2;
+    font-size: 24px;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

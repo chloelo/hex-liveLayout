@@ -1,0 +1,103 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.title {
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+h2.title {
+  margin-bottom: 20px;
+}
+
+p + p {
+  margin-top: 20px;
+}
+
+.title-en {
+  color: #a00404;
+  font-size: 80%;
+}
+
+.skills,
+.contact {
+  background-color: #415165;
+  text-align: center;
+  color: #fff;
+}
+
+.skills .title-en,
+.contact .title-en {
+  color: #fff;
+}
+
+.skills .skill-lists {
+  text-align: left;
+  border-left: 1px solid;
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.work-experience .experience-lists {
+  border-left: 1px solid #96a9c4;
+  margin-left: 15px;
+  padding-left: 15px;
+}
+
+.work-experience .logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: #fff;
+}
+
+.contact .social-icons li,
+.contact .social-icons a {
+  display: inline-block;
+}
+
+.contact .social-icons li + li > a {
+  margin-left: 10px;
+}
+/*# sourceMappingURL=all.css.map */
