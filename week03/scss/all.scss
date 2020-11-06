@@ -1,0 +1,106 @@
+@import "media";
+$primary: #aa0601;
+$white: #fff;
+$black: #000;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@for $i from 1 through 10 {
+  //從 1 到 10 共執行 10 次。
+  .mb-#{$i} {
+    margin-bottom: (8px * $i);
+  }
+  .mt-#{$i} {
+    margin-top: (8px * $i);
+  }
+  .mr-#{$i} {
+    margin-right: (8px * $i);
+  }
+  .ml-#{$i} {
+    margin-left: (8px * $i);
+  }
+  .pb-#{$i} {
+    padding-bottom: (8px * $i);
+  }
+  .pt-#{$i} {
+    padding-top: (8px * $i);
+  }
+  .py-#{$i} {
+    padding-top: (8px * $i);
+    padding-bottom: (8px * $i);
+  }
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  line-height: 1.5;
+}
+img {
+  vertical-align: middle;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+.header {
+  padding: 30px 88px;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    font-size: 20px;
+    display: block;
+    color: $white;
+    &:hover {
+      color: darken($white, 15%);
+    }
+  }
+  li {
+    display: inline-block;
+    & + li {
+      margin-left: 64px;
+    }
+  }
+}
+// 首頁
+.home {
+  .hero-banner {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png")
+      no-repeat center;
+    color: #650300;
+    height: 840px;
+
+    p {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 64px;
+    }
+  }
+}
