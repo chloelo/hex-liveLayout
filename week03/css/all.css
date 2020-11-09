@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@1,400;1,700&display=swap");
 *,
 *::before,
 *::after {
@@ -299,10 +300,11 @@
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 img {
-  display: block;
+  vertical-align: middle;
   max-width: 100%;
   height: auto;
 }
@@ -324,17 +326,15 @@ img {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
-}
-
-img {
-  vertical-align: middle;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 ul {
@@ -355,35 +355,356 @@ ul {
           justify-content: space-between;
 }
 
+.header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .header a {
   font-size: 20px;
-  display: block;
   color: #fff;
+  display: block;
 }
 
 .header a:hover {
   color: #d9d9d9;
 }
 
-.header li {
-  display: inline-block;
-}
-
 .header li + li {
   margin-left: 64px;
 }
 
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 30px 39px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .logo {
+    padding: 10px;
+  }
+  .header .navbar {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .header li {
+    width: 50%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 8px;
+    text-align: center;
+  }
+  .header li + li {
+    margin-left: 0;
+  }
+  .header li:nth-child(2n + 2) {
+    border-left: 1px solid #fff;
+  }
+}
+
+.footer {
+  background-color: #aa0601;
+  color: #fff;
+  padding-top: 48px;
+  padding-bottom: 28px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer li {
+  display: inline-block;
+}
+
+.footer .links,
+.footer .copyright-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer .links {
+  margin-bottom: 18px;
+}
+
+.footer .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  width: 100%;
+}
+
+.footer .navbar {
+  font-size: 16px;
+}
+
+.footer .navbar li + li {
+  margin-left: 48px;
+}
+
+.footer .contact {
+  font-size: 36px;
+}
+
+.footer .contact li {
+  display: block;
+}
+
+.footer .contact li + li {
+  padding-top: 20px;
+}
+
+.footer .copyright-wrap {
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer .policy {
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.footer .policy li + li {
+  margin-left: 62px;
+}
+
+.footer .logo {
+  margin-right: 38px;
+}
+
+.footer .icon-phone {
+  width: 44px;
+  height: 44px;
+  margin-right: 17px;
+}
+
+.footer .icon-mail {
+  width: 48px;
+  height: 48px;
+  margin-right: 17px;
+}
+
+.footer .social-icons li {
+  margin-left: 32px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .footer .navbar li + li {
+    margin-left: 40px;
+  }
+  .footer .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer .social-icons li {
+    margin-left: 24px;
+  }
+  .footer .icon-phone {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  .footer .icon-mail {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+  }
+  .footer .contact {
+    font-size: 20px;
+  }
+  .footer .logo {
+    display: none;
+  }
+  .footer .policy li + li {
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  .footer .info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer .navbar {
+    display: none;
+  }
+  .footer .icon-phone,
+  .footer .icon-mail {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+  .footer .contact {
+    font-size: 16px;
+  }
+  .footer .contact li + li {
+    padding-top: 8px;
+  }
+  .footer .txt {
+    font-size: 14px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .txt .copyright,
+  .footer .txt .policy {
+    width: 100%;
+  }
+  .footer .txt .copyright li + li,
+  .footer .txt .policy li + li {
+    margin-left: 0;
+  }
+  .footer .txt .copyright li,
+  .footer .txt .policy li {
+    width: 100%;
+    margin-top: 7px;
+  }
+  .footer .logo {
+    display: block;
+    width: 46px;
+    margin-right: 0;
+  }
+  .footer .copyright-wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer .social-icons li {
+    margin-left: 0;
+  }
+}
+
 .home .hero-banner {
-  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") no-repeat center;
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") no-repeat center/cover;
   color: #650300;
   height: 840px;
 }
 
-.home .hero-banner p {
+.home .hero-banner .title {
+  font-size: 64px;
+}
+
+.home .hero-banner .subtitle {
   font-size: 36px;
 }
 
-.home .hero-banner h2 {
-  font-size: 64px;
+.home .hero-banner .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.home .hero-banner .text-wrap {
+  text-align: right;
+}
+
+@media screen and (max-width: 991px) {
+  .home .hero-banner .title {
+    font-size: 48px;
+  }
+  .home .hero-banner .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home .hero-banner {
+    height: 394px;
+  }
+  .home .hero-banner .title {
+    font-size: 36px;
+  }
+  .home .hero-banner .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .home .hero-banner .title {
+    font-size: 32px;
+  }
+}
+
+.home .intro {
+  text-align: center;
+}
+
+.home .intro .item-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .intro .item-wrap img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.home .intro .item-wrap .item {
+  width: 25%;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 /*# sourceMappingURL=all.css.map */

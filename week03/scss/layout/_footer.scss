@@ -1,0 +1,171 @@
+.footer {
+  background-color: $primary;
+  color: $white;
+  padding-top: 48px;
+  padding-bottom: 28px;
+  a {
+    color: $white;
+  }
+  li {
+    display: inline-block;
+  }
+  .links,
+  .copyright-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    margin-bottom: 18px;
+  }
+  .txt {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    width: 100%;
+  }
+  .navbar {
+    font-size: 16px;
+    li + li {
+      margin-left: 48px;
+    }
+  }
+  .contact {
+    font-size: 36px;
+    li {
+      display: block;
+    }
+    li + li {
+      padding-top: 20px;
+    }
+  }
+  .copyright-wrap {
+    border-top: 1px solid $white;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .policy {
+    font-size: 14px;
+    margin-left: auto;
+    li + li {
+      margin-left: 62px;
+    }
+  }
+  .logo {
+    margin-right: 38px;
+  }
+  .icon-phone {
+    width: 44px;
+    height: 44px;
+    margin-right: 17px;
+  }
+  .icon-mail {
+    width: 48px;
+    height: 48px;
+    margin-right: 17px;
+  }
+  .social-icons {
+    li {
+      margin-left: 32px;
+    }
+  }
+  @include pad {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .navbar {
+      li + li {
+        margin-left: 40px;
+      }
+    }
+    .social-icons {
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      li {
+        margin-left: 24px;
+      }
+    }
+    .icon-phone {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+    }
+    .icon-mail {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+    .contact {
+      font-size: 20px;
+    }
+    .logo {
+      display: none;
+    }
+    .policy {
+      li + li {
+        margin-left: 24px;
+      }
+    }
+  }
+  @include mobile {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    .info {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .navbar {
+      display: none;
+    }
+    .icon-phone,
+    .icon-mail {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+    .contact {
+      font-size: 16px;
+      li + li {
+        padding-top: 8px;
+      }
+    }
+    .txt {
+      font-size: 14px;
+      // display: block;
+      flex-wrap: wrap;
+      .copyright,
+      .policy {
+        width: 100%;
+        li + li {
+          margin-left: 0;
+        }
+        li {
+          width: 100%;
+          margin-top: 7px;
+        }
+      }
+    }
+    .logo {
+      display: block;
+      width: 46px;
+      margin-right: 0;
+    }
+    .copyright-wrap {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+    }
+  }
+  @include mobile-540 {
+    .social-icons {
+      li {
+        margin-left: 0;
+      }
+    }
+  }
+}
