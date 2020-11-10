@@ -2,7 +2,7 @@
   .hero-banner {
     background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png")
       no-repeat center / cover;
-    color: #650300;
+    color: $title;
     height: 840px;
     .title {
       font-size: 64px;
@@ -43,7 +43,18 @@
     }
   }
   .intro {
+    background-color: $primary-light;
     @include txt-align(center);
+    h2,h3{
+      color:$title;
+    }
+    h2{
+      font-size: 48px;
+      margin-bottom: 60px;
+    }
+    h3{
+      font-size: 24px;
+    }
     .item-wrap {
       display: flex;
       img {
@@ -57,5 +68,8 @@
         margin-right: 15px;
       }
     }
+  }
+  @include pad{
+    
   }
 }

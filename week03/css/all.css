@@ -326,8 +326,9 @@ img {
 }
 
 body {
-  font-family: Roboto, "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+  font-family: Roboto, "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 .container {
@@ -339,6 +340,25 @@ body {
 
 ul {
   list-style: none;
+}
+
+.section-space {
+  padding-top: 64px;
+  padding-bottom: 80px;
+}
+
+@media screen and (max-width: 991px) {
+  .section-space {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section-space {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .header {
@@ -687,7 +707,21 @@ ul {
 }
 
 .home .intro {
+  background-color: #fbf2f2;
   text-align: center;
+}
+
+.home .intro h2, .home .intro h3 {
+  color: #650300;
+}
+
+.home .intro h2 {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.home .intro h3 {
+  font-size: 24px;
 }
 
 .home .intro .item-wrap {
