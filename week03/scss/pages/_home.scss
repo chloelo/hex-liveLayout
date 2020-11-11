@@ -1,75 +1,349 @@
 .home {
-  .hero-banner {
-    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png")
-      no-repeat center / cover;
-    color: $title;
-    height: 840px;
+  h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+    @include txt-align(center);
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .moble-view {
+    display: none;
+  }
+  @include pad {
+    h2 {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+  @include mobile {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .pc-view {
+      display: none;
+    }
+    .moble-view {
+      display: block;
+    }
+  }
+}
+.hero-banner {
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") no-repeat
+    center / cover;
+  color: $title;
+  height: 840px;
+  .title {
+    font-size: 64px;
+  }
+  .subtitle {
+    font-size: 36px;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .text-wrap {
+    @include txt-align(right);
+  }
+  @include pad {
     .title {
-      font-size: 64px;
+      font-size: 48px;
     }
     .subtitle {
+      font-size: 20px;
+    }
+  }
+  @include mobile {
+    height: 394px;
+    .title {
       font-size: 36px;
     }
-    .container {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+    .subtitle {
+      font-size: 16px;
     }
-    .text-wrap {
-      @include txt-align(right);
+  }
+  @include mobile-540 {
+    .title {
+      font-size: 32px;
     }
-    @include pad {
-      .title {
-        font-size: 48px;
+  }
+}
+.intro {
+  background-color: $primary-light;
+  @include txt-align(center);
+  h2,
+  h3 {
+    color: $title;
+  }
+
+  .item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 40px;
+    }
+    .item {
+      width: calc(20% - 30px);
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+  @include pad {
+    .item-wrap {
+      justify-content: center;
+      img {
+        margin-bottom: 16px;
       }
-      .subtitle {
-        font-size: 20px;
+      .item {
+        width: calc(50% - 30px);
+        margin-bottom: 40px;
       }
     }
-    @include mobile {
-      height: 394px;
-      .title {
-        font-size: 36px;
-      }
-      .subtitle {
-        font-size: 16px;
+  }
+  @include mobile {
+    .item-wrap {
+      .item {
+        width: calc(100% - 30px);
       }
     }
-    @include mobile-540 {
-      .title {
+  }
+}
+.classic {
+  h2 {
+    color: $title;
+  }
+  h3 {
+    color: $primary;
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 8px;
+    }
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    > img {
+      width: calc(60% - 30px);
+    }
+    &:nth-child(odd) {
+      > img {
+        margin-right: 30px;
+      }
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      > img {
+        margin-left: 30px;
+      }
+    }
+  }
+  @include pad {
+    h3 {
+      font-size: 28px;
+      img {
+        width: 32px;
+        height: auto;
+      }
+    }
+    .icon-thunder {
+      width: 23px;
+    }
+    .item {
+      > img {
+        width: 50%;
+      }
+      &:nth-child(even) {
+        flex-direction: row;
+        > img {
+          margin-left: 0px;
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+  @include mobile {
+    .item {
+      position: relative;
+      &:nth-child(odd) {
+        > img {
+          margin-right: 0;
+        }
+      }
+      > img {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+      }
+    }
+    h3 {
+      position: absolute;
+      color: $white;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+.join-design {
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png") no-repeat
+    center / cover;
+  h2 {
+    color: $white;
+  }
+  .item-wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+  .item {
+    position: relative;
+    @include txt-align(center);
+    &:first-child {
+      margin-right: 30px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba($white, $alpha: 0.5);
+    }
+    h3 {
+      color: $primary;
+      font-size: 72px;
+      min-width: 90%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @include pad {
+    .item {
+      h3 {
         font-size: 32px;
       }
     }
   }
-  .intro {
-    background-color: $primary-light;
-    @include txt-align(center);
-    h2,h3{
-      color:$title;
-    }
-    h2{
-      font-size: 48px;
-      margin-bottom: 60px;
-    }
-    h3{
-      font-size: 24px;
-    }
+  @include mobile {
     .item-wrap {
-      display: flex;
-      img {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
-      }
-      .item {
-        width: 25%;
-        margin-left: 15px;
-        margin-right: 15px;
+      flex-direction: column;
+    }
+    .item {
+      &:first-child {
+        margin-right: 0px;
+        margin-bottom: 16px;
       }
     }
   }
-  @include pad{
-    
+}
+.recommend {
+  img {
+    width: 100%;
+  }
+  h2 {
+    color: $title;
+  }
+  .name,
+  .time {
+    font-size: 14px;
+  }
+  .name {
+    margin-bottom: 7px;
+    font-weight: bold;
+  }
+  .time {
+    color: lighten($black, 50%);
+    margin-top: 10px;
+  }
+  .item-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .item {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(25% - 30px);
+    border: 1px solid lighten($black, 90%);
+  }
+  .txt-wrap {
+    padding: 15px;
+  }
+  @include pad {
+    .item {
+      width: calc(50% - 30px);
+      margin-bottom: 30px;
+    }
+  }
+  @include mobile {
+    .item {
+      width: 100%;
+    }
+  }
+}
+.contact-us {
+  .item-wrap {
+    margin: 0 auto;
+    width: 66.6666%;
+  }
+  h2 {
+    margin-bottom: 24px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  background-color: $primary-light;
+  label {
+    display: inline-block;
+  }
+  input:not([type="checkbox"]),
+  textarea {
+    border: none;
+    background-color: $primary-light;
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 16px;
+    border: 1px solid $black;
+  }
+  .input-group {
+    margin-bottom: 16px;
+  }
+  .btn-submit {
+    width: 33.3333%;
+    padding: 16px;
+    background-color: $primary;
+    color: $white;
+  }
+  .checkbox-wrap {
+    position: relative;
+    padding-left: 18px;
+  }
+  .checkbox-agree {
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+  @include mobile {
+    .item-wrap {
+      width: 100%;
+    }
   }
 }

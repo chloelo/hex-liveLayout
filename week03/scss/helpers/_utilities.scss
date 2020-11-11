@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:ital,wght@1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700;900&display=swap");
 a {
   text-decoration: none;
   display: inline-block;
@@ -13,6 +13,13 @@ img {
 }
 .align-items-center {
   align-items: center;
+}
+button {
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: transparent;
+  }
 }
 .text-center {
   text-align: center;
@@ -33,14 +40,14 @@ body {
 ul {
   list-style: none;
 }
-.section-space{
+.section-space {
   padding-top: 64px;
   padding-bottom: 80px;
-  @include pad{
+  @include pad {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  @include mobile{
+  @include mobile {
     padding-top: 32px;
     padding-bottom: 32px;
   }
