@@ -33,12 +33,16 @@ $red: #891818;
     padding-bottom: (8px * $i);
   }
 }
+@mixin flex-setting($justifyContnet: center, $alignItems: center, $wrap: nowrap) {
+  display: flex;
+  justify-content: $justifyContnet;
+  align-items: $alignItems;
+  flex-wrap: $wrap;
+}
 .pb-20 {
   padding-bottom: 160px;
 }
-.d-flex {
-  display: flex;
-}
+
 .text-center {
   text-align: center;
 }
@@ -60,23 +64,20 @@ ul {
 
 header {
   color: $white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-setting();
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week2/banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   .social-icons {
-    display: flex;
-    justify-content: space-between;
+    @include flex-setting(space-between);
   }
 }
-h1 {
+.h1 {
   font-size: 80px;
 }
-h2 {
+.h2 {
   font-size: 75px;
 }
 
@@ -86,9 +87,7 @@ h2 {
   margin: auto;
   li {
     @extend .mt-4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-setting();
   }
   .dot {
     width: 22px;
@@ -106,9 +105,7 @@ h2 {
     font-size: 20px;
   }
   .imgs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flex-setting(center, center, wrap);
   }
 }
 .works {
@@ -118,9 +115,7 @@ h2 {
     @extend .mb-7, .mt-2;
   }
   .lists {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex-setting(space-around, center, wrap);
   }
 }
 .contact {
